@@ -6,7 +6,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': os.environ['DB_HOST'],
-        'PORT': os.environ['DB_PORT_NUMBER'],
+        'PORT': os.environ['DB_PORT'],
         'NAME': os.environ['DB_NAME'],
         'USER': os.environ['DB_USER_NAME'],
         'PASSWORD': os.environ['DB_PASSWORD'],
@@ -20,4 +20,5 @@ SECRET_KEY = os.environ['WEBSITE_SECRET_KEY']
 TIME_ZONE = 'Europe/Moscow'
 
 USE_TZ = True
+
 
