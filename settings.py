@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 load_dotenv()
 host = os.environ['DB_HOST']
 password = os.environ['DB_PASSWORD']
-secret_key = os.environ['WEBSITE_SECRET_KEY']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -18,9 +17,10 @@ DATABASES = {
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = secret_key
+SECRET_KEY = os.environ['WEBSITE_SECRET_KEY']
 
 TIME_ZONE = 'Europe/Moscow'
 
 USE_TZ = True
+
 
